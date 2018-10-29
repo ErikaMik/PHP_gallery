@@ -24,7 +24,10 @@
         <input type="submit" value="Upload" name="submit">
       </form>
     </div>
-     <div class="row p-2 gallery">
+    <?php if (isset($alert)) { ?>
+      <div class="alert alert-success"><?= $alert ?></div>
+   <?php } ?> 
+    <div class="row p-2 gallery">
       <?php 
       foreach ($images as $image) {
         echo "<div class='col-md-4'>";
